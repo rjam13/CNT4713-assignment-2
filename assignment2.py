@@ -35,9 +35,3 @@ class Assignment2:
         finally:
             sock.close()
         return True
-
-retval = Assignment2.connectTcp("www.google.com", 80)
-if retval:
-    print("Connection established correctly")
-else:
-    print("Some error")
