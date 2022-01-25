@@ -8,8 +8,7 @@ class Assignment2:
         self.year = year #assuming this is birth year from tellAge
 
     def tellAge(self, currentYear: int): 
-        print('Your age is ' + str(currentYear - self.year - 1)) 
-        #-1 assumes that birthday for currentYear have not occured
+        print('Your age is ' + str(currentYear - self.year)) 
 
     def listAnniversaries(self) -> list: #list of decade anniversaries from variable year to 2022
         return [x*10 for x in range(1, (2021 - self.year) // 10 + 1)]
@@ -23,7 +22,7 @@ class Assignment2:
         for x in string: 
             if x.isdigit():
                 numOfDig += 1
-        return len(string) >= 9 and string[0].isalpha() and numOfDig == 1
+        return len(string) >= 9 and string[0].islower() and numOfDig == 1
 
     @staticmethod
     def connectTcp(host: str, port: int) -> bool:
